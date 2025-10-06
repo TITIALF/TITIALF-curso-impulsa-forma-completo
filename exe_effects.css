@@ -119,4 +119,54 @@ color:#FFF;
 .emphasis1 .exe-fx .fx-C2 a,
 .emphasis1 .fx-pagination a{
 background:#FFF;
+
+}
+/* DISEÑO ACORDEÓN UNIFICADO PARA CURSO (APLICANDO ESTILOS FINALES) */
+
+/* 1. ACORDEÓN COMPLETO: Estabilización y limpieza */
+.exe-accordion {
+    border: none !important; 
+    background-color: transparent !important; 
+    padding: 0 !important;
+    box-shadow: none !important; 
+    width: 100% !important; 
+    margin: 1em 0 !important; 
+}
+
+/* 2. TÍTULO: Fondo Gris Visible */
+.fx-accordion-title {
+    background-color: #EFEFEF !important; 
+    border-bottom: 1px solid #dcdcdc !important; 
+    border-radius: 0 !important;
+    padding: 10px 15px !important; 
+    color: #333 !important; 
+}
+
+/* 3. ELIMINACIÓN DE LA LÍNEA BLANCA SUPERIOR */
+.fx-accordion-title {
+    border-top: none !important;
+}
+.fx-accordion-title-0 {
+    border-top: none !important;
+}
+
+/* 4. EFECTO HOVER: Gris notable al pasar el cursor */
+.fx-accordion-title:hover {
+    background-color: #D3D3D3 !important; 
+    opacity: 1 !important; 
+}
+
+/* 5. ELIMINACIÓN DE DOBLE FLECHA */
+.iDevice.exe-accordion .fx-accordion-title i,
+.iDevice.exe-accordion .fx-accordion-title::before {
+    display: none !important;
+    content: none !important;
+}
+
+/* 6. CONTENIDO: Fondo limpio del tema */
+.fx-accordion-content {
+    background-color: transparent !important; 
+    padding: 15px !important;
+    border: none !important; 
+    box-shadow: none !important;
 }

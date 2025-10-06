@@ -144,6 +144,7 @@ background:#FFF;
     color: #333 !important; /* Texto Negro */
     font-weight: bold !important; /* Texto en Negrita */
     padding: 10px 15px !important;
+text-shadow: none !important; /* <-- ¡Añade esta línea! Es fundamental. */
 }
 
 /* 3. EFECTO HOVER: Color y opacidad */
@@ -166,3 +167,4 @@ background:#FFF;
     display: none !important;
     content: none !important;
 }
+

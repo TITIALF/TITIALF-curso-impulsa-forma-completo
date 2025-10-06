@@ -121,47 +121,48 @@ color:#FFF;
 background:#FFF;
 
 }
-/* DISEÑO ACORDEÓN UNIFICADO Y CORREGIDO PARA CURSO (VERSION 2) */
+/* DISEÑO ACORDEÓN CURSO - VERSIÓN ESTABLE Y LIMPIA DEL DEMO */
 
-/* 1. ACORDEÓN COMPLETO: Estabilización y limpieza */
-.iDevice.exe-accordion {
+/* 1. Limpieza general del iDevice de Acordeón */
+.iDevice.exe-accordion,
+.exe-accordion {
     border: none !important; 
     background-color: transparent !important; 
     padding: 0 !important;
     box-shadow: none !important; 
+    width: 100% !important; /* Asegura el ancho correcto */
+    margin: 1em 0 !important;
 }
 
-/* 2. TÍTULO: Fondo Gris Visible, Texto y Estilo */
-.exe-accordion .fx-accordion-section a.fx-accordion-title {
-    background-color: #EFEFEF !important; /* Gris claro, visible */
-    border-bottom: 1px solid #dcdcdc !important; 
+/* 2. TÍTULO: Diseño, Color de Fondo y Texto */
+.exe-accordion .fx-accordion-section a.fx-accordion-title,
+.fx-accordion-title {
+    background-color: #EFEFEF !important; /* Fondo Gris Visible */
+    border: none !important; /* Elimina todos los bordes problemáticos */
+    border-bottom: 1px solid #dcdcdc !important; /* Mantiene un separador sutil */
     border-radius: 0 !important;
-    /* RESTAURAR TEXTO NEGRO Y NEGRITA */
-    color: #333 !important; 
-    font-weight: bold !important;
+    color: #333 !important; /* Texto Negro */
+    font-weight: bold !important; /* Texto en Negrita */
+    padding: 10px 15px !important;
 }
 
-/* 3. EFECTO HOVER: Gris notable al pasar el cursor */
-.exe-accordion .fx-accordion-section a.fx-accordion-title:hover {
-    background-color: #D3D3D3 !important; /* Gris Medio-Oscuro para el hover */
+/* 3. EFECTO HOVER: Color y opacidad */
+.fx-accordion-title:hover {
+    background-color: #D3D3D3 !important; /* Gris Medio-Oscuro */
+    opacity: 1 !important; 
 }
 
-/* 4. CONTENIDO: Fondo limpio */
+/* 4. CONTENIDO: Limpieza del fondo */
 .exe-accordion .fx-accordion-content {
     background-color: transparent !important; 
     border: none !important;  
 }
 
-/* 5. ELIMINACIÓN DE DOBLE FLECHA Y LIMPIEZA DEL TÍTULO */
-/* MANTENEMOS LA REGLA QUE LIMPIÓ LAS FLECHAS EXTRA DEL TEMA BASE */
-.iDevice.exe-accordion .fx-accordion-section a.fx-accordion-title::before {
+/* 5. ELIMINACIÓN DE TODAS LAS FLECHAS Y COMPONENTES QUE CAUSAN PROBLEMAS */
+/* Esta anulación es CRUCIAL para la estabilidad y debe ser total. */
+.iDevice.exe-accordion .fx-accordion-title i,
+.iDevice.exe-accordion .fx-accordion-title::before,
+.fx-accordion-title i {
     display: none !important;
     content: none !important;
-}
-
-/* 6. RESTAURAR LA FLECHA ORIGINAL DE APERTURA (El icono i) */
-.iDevice.exe-accordion .fx-accordion-title i {
-    /* Mostramos el icono 'i' que es la flecha original del tema */
-    display: inline-block !important; 
-    color: #333 !important; /* Asegura que la flecha sea oscura */
 }

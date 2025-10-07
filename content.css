@@ -162,6 +162,7 @@ li{list-style-position:outside}
     background: #EFEFEF !important; /* Nuevo Fondo Gris Claro */
     color: #333 !important; /* Nuevo Texto Negro */
     font-weight: bold !important; /* Asegurar Negrita */
+    font-size: 1.1em !important; /* <--- AJUSTE: Letra un poco más grande */
 }
 
 /* 2. Limpieza general del iDevice */
@@ -180,9 +181,9 @@ li{list-style-position:outside}
     text-shadow: none !important; /* Elimina el brillo blanco */
 }
 
-/* 4. HOVER: Aplica el gris oscuro */
-.iDevice.exe-accordion .fx-accordion-section a.fx-accordion-title:hover {
-    background-color: #D3D3D3 !important; 
+/* 4. HOVER: Aplica el gris oscuro (Aseguramos la especificidad) */
+.fx-accordion-title:hover, .exe-accordion h2:hover {
+    background-color: #D3D3D3 !important; /* Gris Medio-Oscuro para el hover */
     opacity: 1 !important; 
 }
 
@@ -195,6 +196,7 @@ li{list-style-position:outside}
     display: inline-block !important; /* Muestra el icono original */
     color: #333 !important; /* Flecha oscura */
 }
+
 
 
 

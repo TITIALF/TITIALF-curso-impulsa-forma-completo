@@ -121,48 +121,5 @@ color:#FFF;
 background:#FFF;
 
 }
-/* DISEÑO ACORDEÓN CURSO - SOLUCIÓN ESTABLE Y FINAL */
 
-/* 1. ACORDEÓN COMPLETO: Eliminamos todos los bordes y fondos creados */
-.iDevice.exe-accordion {
-    border: none !important; 
-    background-color: transparent !important; 
-    padding: 0 !important;
-    box-shadow: none !important; 
-}
-
-/* 2. TÍTULO: Fondo del tema (el gris tenue original), sin bordes extra */
-.exe-accordion .fx-accordion-section a.fx-accordion-title {
-    background-color: #EFEFEF !important; 
-    border-bottom: 1px solid #dcdcdc !important; 
-    border-radius: 0 !important;
-    
-    /* CORRECCIÓN 1: FORZAR TEXTO NEGRO Y NEGRITA */
-    color: #333 !important; 
-    font-weight: bold !important;
-    text-shadow: none !important; /* Elimina el brillo blanco */
-}
-
-/* 3. EFECTO HOVER: Gris notable al pasar el cursor (EL ÚNICO CAMBIO VISUAL) */
-.exe-accordion .fx-accordion-section a.fx-accordion-title:hover {
-    background-color: #D3D3D3 !important; 
-}
-
-/* 4. CONTENIDO: Fondo del tema (el blanco/claro original), limpio */
-.exe-accordion .fx-accordion-content {
-    background-color: transparent !important; 
-    border: none !important;  
-}
-
-/* 5. ELIMINACIÓN DE DOBLE FLECHA */
-.iDevice.exe-accordion .fx-accordion-section a.fx-accordion-title::before {
-    display: none !important;
-    content: none !important;
-}
-
-/* CORRECCIÓN 2: RESTAURAR EL ICONO 'i' (la flecha que abre/cierra) */
-.iDevice.exe-accordion .fx-accordion-title i {
-    display: inline-block !important; /* Muestra el icono original */
-    color: #333 !important; /* Lo hace visible en color oscuro */
-}
 

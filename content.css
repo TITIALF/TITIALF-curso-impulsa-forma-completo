@@ -192,22 +192,26 @@ li{list-style-position:outside}
     display: none !important; /* OCULTAR el icono "i" roto */
 }
 .iDevice.exe-accordion .fx-accordion-title::before {
-    display: none !important; /* OCULTAR el pseudo-elemento "::before" (truco fallido) */
+    display: none !important; /* OCULTAR pseudo-elemento "::before" */
 }
 
-/* 6. INYECCIÓN DE LA FLECHA FINAL Y FUNCIONAL (Solución del Demo) */
+/* 6. INYECCIÓN DE LA FLECHA FINAL Y FUNCIONAL (Añadimos position: relative) */
+
+/* El padre necesita position: relative para posicionar la flecha ::after */
+.exe-accordion .fx-accordion-title {
+    position: relative !important; /* <--- CLAVE PARA LA FLECHA */
+}
 
 /* Flecha que indica desplegable (Ajuste de Posición y Estilo) */
 .exe-accordion .fx-accordion-title::after {
 	content: '\25BC' !important; /* Flecha hacia abajo (cerrado) */
     position: absolute !important;
-    right: 15px !important; /* Dejamos un margen */
+    right: 15px !important; /* Margen */
     top: 50% !important;
     transform: translateY(-50%) !important;
 	transition: transform 0.3s ease !important;
 	font-size: 1.2em !important;
-	color: #333 !important; /* Color oscuro */
-    /* Aseguramos que sea visible y no se rompa */
+	color: #333 !important; 
     display: block !important;
     width: 1em !important; 
     height: 1em !important;
@@ -216,6 +220,7 @@ li{list-style-position:outside}
 .exe-accordion .fx-accordion-title.active::after {
 	content: '\25B2' !important; /* Flecha hacia arriba (abierto) */
 }
+
 
 
 

@@ -194,12 +194,13 @@ li{list-style-position:outside}
 }
 
 /* 6. RESTAURAR FLECHA ORIGINAL: Asegura que el ícono de apertura y cierre se vea */
-.fx-accordion-title i {
+.iDevice.exe-accordion .fx-accordion-title i { /* Selector MÁS ESPECÍFICO */
     display: inline-block !important; /* Muestra el icono original */
     color: #333 !important; /* Lo hace visible en color oscuro */
-    float: right; /* Mueve la flecha a la derecha para que no estorbe */
-    padding-left: 10px;
+    float: right !important; /* Mueve la flecha a la derecha */
+    padding-left: 10px !important;
 }
+
 
 
 

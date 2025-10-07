@@ -155,6 +155,46 @@ li{list-style-position:outside}
 .exe-udlContent-content-simplified{line-height:2.5em;letter-spacing:.15em;word-spacing:.15em}
 
 .exe-udlContent-content-simplified p{margin:2em 0}
+/* DISEÑO ACORDEÓN CURSO - SOLUCIÓN ESTABLE Y FINAL */
+
+/* 1. Anulación del estilo problemático (Fondo oscuro, texto blanco) */
+.fx-accordion-title, .exe-accordion h2 {
+    background: #EFEFEF !important; /* Nuevo Fondo Gris Claro */
+    color: #333 !important; /* Nuevo Texto Negro */
+    font-weight: bold !important; /* Asegurar Negrita */
+}
+
+/* 2. Limpieza general del iDevice */
+.iDevice.exe-accordion {
+    border: none !important; 
+    background-color: transparent !important; 
+    padding: 0 !important;
+    box-shadow: none !important; 
+}
+
+/* 3. Ajuste de Título y Línea Divisoria */
+.iDevice.exe-accordion .fx-accordion-section a.fx-accordion-title {
+    border: none !important; 
+    border-bottom: 1px solid #dcdcdc !important; 
+    border-radius: 0 !important;
+    text-shadow: none !important; /* Elimina el brillo blanco */
+}
+
+/* 4. HOVER: Aplica el gris oscuro */
+.iDevice.exe-accordion .fx-accordion-section a.fx-accordion-title:hover {
+    background-color: #D3D3D3 !important; 
+    opacity: 1 !important; 
+}
+
+/* 5. GESTIÓN DE FLECHAS: Restaura la flecha y quita las extra */
+.iDevice.exe-accordion .fx-accordion-title::before {
+    display: none !important; /* Quita el elemento extra si existe */
+    content: none !important;
+}
+.iDevice.exe-accordion .fx-accordion-title i {
+    display: inline-block !important; /* Muestra el icono original */
+    color: #333 !important; /* Flecha oscura */
+}
 
 
 

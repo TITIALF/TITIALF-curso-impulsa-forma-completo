@@ -187,26 +187,34 @@ li{list-style-position:outside}
     opacity: 1 !important; 
 }
 
-/* 5. GESTIÓN DE FLECHAS: Anulación de flechas extra */
+/* 5. LIMPIEZA TOTAL DE ICONOS (para evitar conflictos) */
+.fx-accordion-title i {
+    display: none !important; /* OCULTAR el icono "i" roto */
+}
 .iDevice.exe-accordion .fx-accordion-title::before {
-    display: none !important; /* Quita el elemento extra si existe */
-    content: none !important;
+    display: none !important; /* OCULTAR el pseudo-elemento "::before" (truco fallido) */
 }
 
-/* 6. FORZAR APARICIÓN DEL INDICADOR DE DESPLIEGUE (TRUCO DEL DEMO) */
-.iDevice.exe-accordion .fx-accordion-title i {
-    display: none !important; /* Ocultamos el ícono roto */
-}
+/* 6. INYECCIÓN DE LA FLECHA FINAL Y FUNCIONAL (Solución del Demo) */
 
-/* Usamos el pseudo-elemento que ya habíamos limpiado (::before) para inyectar el carácter */
-.iDevice.exe-accordion .fx-accordion-title::before {
-    display: inline-block !important; /* Lo hacemos visible */
-    content: '▶' !important; /* Inyectamos el carácter de flecha/triángulo */
-    float: right !important; /* Lo movemos a la derecha */
-    color: #333 !important;
-    margin-right: 5px !important;
-    font-size: 1.1em !important;
-    /* FALTA: ANIMACIÓN (Esto es complejo y lo omitiremos, pero aparecerá) */
+/* Flecha que indica desplegable (Ajuste de Posición y Estilo) */
+.exe-accordion .fx-accordion-title::after {
+	content: '\25BC' !important; /* Flecha hacia abajo (cerrado) */
+    position: absolute !important;
+    right: 15px !important; /* Dejamos un margen */
+    top: 50% !important;
+    transform: translateY(-50%) !important;
+	transition: transform 0.3s ease !important;
+	font-size: 1.2em !important;
+	color: #333 !important; /* Color oscuro */
+    /* Aseguramos que sea visible y no se rompa */
+    display: block !important;
+    width: 1em !important; 
+    height: 1em !important;
+}
+/* Flecha Activa: cuando el desplegable está abierto */
+.exe-accordion .fx-accordion-title.active::after {
+	content: '\25B2' !important; /* Flecha hacia arriba (abierto) */
 }
 
 

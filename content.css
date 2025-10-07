@@ -224,20 +224,21 @@ li{list-style-position:outside}
 }
 /* INYECCIÓN DE TÍTULO DE SECCIÓN UNIFICADO: "RECURSOS ESENCIALES" */
 
-/* Seleccionamos el contenedor principal de cada acordeón */
-.exe-accordion::before {
+/* Seleccionamos el iDevice que contiene el acordeón (el contenedor padre) */
+.iDevice.exe-accordion::before {
     content: "Recursos Esenciales" !important; /* El texto que inyectamos */
     display: block !important;
     font-size: 1.25em !important; /* Letra visiblemente más grande */
     font-weight: bold !important; /* En Negrita */
-    color: #007691 !important; /* Color de acento de tu tema (el azul/cian) */
+    color: #007691 !important; /* Color de acento de tu tema */
     
-    /* Añadir un separador visual para que no se mezcle */
+    /* Separador y Espaciado */
     border-bottom: 2px solid #007691;
     padding-bottom: 5px;
-    margin-bottom: 10px !important;
+    margin-bottom: 15px !important; /* Damos más espacio para separarlo del acordeón */
     padding-left: 5px !important;
 }
+
 
 
 

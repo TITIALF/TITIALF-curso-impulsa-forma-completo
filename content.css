@@ -193,14 +193,22 @@ li{list-style-position:outside}
     content: none !important;
 }
 
-/* 6. RESTAURAR FLECHA ORIGINAL: Asegura que el ícono de apertura y cierre se vea */
-.fx-accordion-title i {
-    /* Quitamos el selector largo y usamos el selector simple y el !important para anular */
-    display: inline-block !important; /* Vuelve a mostrar el icono original */
-    color: #333 !important; /* Lo hace visible en color oscuro */
-    float: right !important; /* Mueve la flecha a la derecha */
-    padding-left: 10px !important;
+/* 6. FORZAR APARICIÓN DEL INDICADOR DE DESPLIEGUE (TRUCO DEL DEMO) */
+.iDevice.exe-accordion .fx-accordion-title i {
+    display: none !important; /* Ocultamos el ícono roto */
 }
+
+/* Usamos el pseudo-elemento que ya habíamos limpiado (::before) para inyectar el carácter */
+.iDevice.exe-accordion .fx-accordion-title::before {
+    display: inline-block !important; /* Lo hacemos visible */
+    content: '▶' !important; /* Inyectamos el carácter de flecha/triángulo */
+    float: right !important; /* Lo movemos a la derecha */
+    color: #333 !important;
+    margin-right: 5px !important;
+    font-size: 1.1em !important;
+    /* FALTA: ANIMACIÓN (Esto es complejo y lo omitiremos, pero aparecerá) */
+}
+
 
 
 

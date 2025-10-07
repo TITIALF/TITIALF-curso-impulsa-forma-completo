@@ -195,11 +195,11 @@ li{list-style-position:outside}
     display: none !important; /* OCULTAR pseudo-elemento "::before" */
 }
 
-/* 6. INYECCIÓN DE LA FLECHA FINAL Y FUNCIONAL (Añadimos position: relative) */
+/* 6. INYECCIÓN DE LA FLECHA FINAL Y FUNCIONAL (Ajuste de Posición Definitivo) */
 
-/* El padre necesita position: relative para posicionar la flecha ::after */
-.exe-accordion .fx-accordion-title {
-    position: relative !important; /* <--- CLAVE PARA LA FLECHA */
+/* El padre necesita position: relative, y lo inyectamos de forma fuerte */
+.fx-accordion-title {
+    position: relative !important; /* <--- CLAVE PARA QUE NO SE ESTIRE */
 }
 
 /* Flecha que indica desplegable (Ajuste de Posición y Estilo) */
@@ -212,9 +212,11 @@ li{list-style-position:outside}
 	transition: transform 0.3s ease !important;
 	font-size: 1.2em !important;
 	color: #333 !important; 
-    display: block !important;
-    width: 1em !important; 
-    height: 1em !important;
+    
+    /* HACEMOS EL ELEMENTO PEQUEÑO Y PRECISO */
+    display: inline-block !important; /* Usamos inline-block para que ocupe el mínimo espacio */
+    width: auto !important; /* Desactiva el width anterior que lo estiraba */
+    height: auto !important; /* Desactiva el height anterior */
 }
 /* Flecha Activa: cuando el desplegable está abierto */
 .exe-accordion .fx-accordion-title.active::after {

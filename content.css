@@ -96,6 +96,49 @@ li{list-style-position:outside}
 .toggle-idevice{text-align:right;display:block;margin-right:13px}
 .iDevice_header .toggle-idevice{position:absolute;right:13px;bottom:13px;margin:0}
 .toggle-idevice a{display:inline-block;width:20px;height:20px;background:url(_intef_icons.png) no-repeat 0 -20px}
+/* ==== Mejora visual de los desplegables ==== */
+.hidden-idevice .iDevice_header {
+  background-color: #f0f0f0; /* gris suave */
+  color: #222; /* texto oscuro */
+  border-radius: 8px;
+  transition: background-color 0.3s ease, transform 0.3s ease;
+  cursor: pointer;
+  padding: 10px 15px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+/* efecto al pasar el cursor */
+.hidden-idevice .iDevice_header:hover {
+  background-color: #e4e4e4;
+  transform: scale(1.02);
+}
+
+/* título del desplegable */
+.hidden-idevice .iDeviceTitle {
+  font-weight: 600;
+  font-size: 1.1em;
+}
+
+/* flecha del desplegable */
+.toggle-idevice a {
+  background: none;
+  width: 16px;
+  height: 16px;
+  border: solid #333;
+  border-width: 0 2px 2px 0;
+  display: inline-block;
+  padding: 3px;
+  transform: rotate(45deg);
+  transition: transform 0.3s ease;
+  margin-left: 8px;
+}
+
+/* flecha al abrir */
+.hidden-idevice.show .toggle-idevice a {
+  transform: rotate(225deg);
+}
 .toggle-idevice .show-idevice{background-position:0 0}
 .toggle-idevice span,#printNode a span{position:absolute;overflow:hidden;clip:rect(0,0,0,0);height:0}
 /* eXe < 2.1 */
@@ -153,4 +196,5 @@ li{list-style-position:outside}
 
 /* UDL iDevice */
 .exe-udlContent-content-simplified{line-height:2.5em;letter-spacing:.15em;word-spacing:.15em}
+
 .exe-udlContent-content-simplified p{margin:2em 0}

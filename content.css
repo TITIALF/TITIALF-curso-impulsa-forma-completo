@@ -187,15 +187,20 @@ li{list-style-position:outside}
     opacity: 1 !important; 
 }
 
-/* 5. GESTIÓN DE FLECHAS: Restaura la flecha y quita las extra */
+/* 5. GESTIÓN DE FLECHAS: Anulación de flechas extra */
 .iDevice.exe-accordion .fx-accordion-title::before {
     display: none !important; /* Quita el elemento extra si existe */
     content: none !important;
 }
-.iDevice.exe-accordion .fx-accordion-title i {
+
+/* 6. RESTAURAR FLECHA ORIGINAL: Asegura que el ícono de apertura y cierre se vea */
+.fx-accordion-title i {
     display: inline-block !important; /* Muestra el icono original */
-    color: #333 !important; /* Flecha oscura */
+    color: #333 !important; /* Lo hace visible en color oscuro */
+    float: right; /* Mueve la flecha a la derecha para que no estorbe */
+    padding-left: 10px;
 }
+
 
 
 

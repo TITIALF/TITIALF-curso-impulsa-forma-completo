@@ -162,6 +162,23 @@
    
 <p id="made-with-eXe"><a href="https://exelearning.net/" target="_blank" rel="noopener"><span>Creado con eXeLearning<span> (Ventana nueva)</span></span></a></p><script type="text/javascript" src="_intef_js.js"></script></body>
 </html>
+/* INYECCIÓN DE TÍTULO DE SECCIÓN UNIFICADO: "RECURSOS ESENCIALES" */
+
+/* Seleccionamos el contenedor principal de cada acordeón */
+.exe-accordion::before {
+    content: "Recursos Esenciales" !important; /* El texto que inyectamos */
+    display: block !important;
+    font-size: 1.25em !important; /* Letra visiblemente más grande */
+    font-weight: bold !important; /* En Negrita */
+    color: #007691 !important; /* Color de acento de tu tema (el azul/cian) */
+    
+    /* Añadir un separador visual para que no se mezcle */
+    border-bottom: 2px solid #007691;
+    padding-bottom: 5px;
+    margin-bottom: 10px !important;
+    padding-left: 5px !important;
+}
+
 
 
 

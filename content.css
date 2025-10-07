@@ -155,52 +155,6 @@ li{list-style-position:outside}
 .exe-udlContent-content-simplified{line-height:2.5em;letter-spacing:.15em;word-spacing:.15em}
 
 .exe-udlContent-content-simplified p{margin:2em 0}
-/* DISEÑO ACORDEÓN CURSO - SOLUCIÓN ESTABLE Y FINAL */
 
-/* 1. Limpieza general del iDevice (la forma más fuerte de anular) */
-.iDevice.exe-accordion {
-    border: none !important; 
-    background-color: transparent !important; 
-    padding: 0 !important;
-    box-shadow: none !important; 
-    width: 100% !important; 
-    margin: 1em 0 !important; 
-}
 
-/* 2. TÍTULO: Aplica el color gris y fuerza el texto oscuro/negrita, quitando brillo */
-.iDevice.exe-accordion .fx-accordion-section a.fx-accordion-title {
-    background-color: #EFEFEF !important; /* Fondo Gris Visible */
-    border: none !important; 
-    border-bottom: 1px solid #dcdcdc !important; 
-    border-radius: 0 !important;
-    
-    /* ANULACIONES CRÍTICAS PARA EL TEXTO */
-    color: #333 !important; /* FORZAR TEXTO OSCURO */
-    font-weight: bold !important; /* FORZAR NEGRITA */
-    text-shadow: none !important; /* ELIMINAR EL BRILLO BLANCO */
-}
-
-/* 3. HOVER: Aplica el gris oscuro SOLO al pasar el cursor */
-.iDevice.exe-accordion .fx-accordion-section a.fx-accordion-title:hover {
-    background-color: #D3D3D3 !important; /* Gris Medio-Oscuro para el hover */
-    opacity: 1 !important; 
-}
-
-/* 4. CONTENIDO: Limpieza del fondo */
-.iDevice.exe-accordion .fx-accordion-content {
-    background-color: transparent !important; 
-    border: none !important;  
-}
-
-/* 5. GESTIÓN DE FLECHAS: Anulación de flechas extra */
-.iDevice.exe-accordion .fx-accordion-title::before {
-    display: none !important;
-    content: none !important;
-}
-
-/* 6. RESTAURAR FLECHA ORIGINAL: Asegura que el ícono de apertura y cierre se vea */
-.iDevice.exe-accordion .fx-accordion-title i {
-    display: inline-block !important; /* Muestra el icono original */
-    color: #333 !important; /* Lo hace visible en color oscuro */
-}
 

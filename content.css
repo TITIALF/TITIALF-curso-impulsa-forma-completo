@@ -238,6 +238,13 @@ li{list-style-position:outside}
     margin-bottom: 15px !important; /* Espacio para separarlo del acordeón */
     padding-left: 5px !important;
 }
+/* Corrección de color en navegación lateral (Menú) */
+#siteNav li.current-page-parent > a, 
+#siteNav li.active > a,
+#siteNav li a:hover {
+    color: #007691 !important;
+    text-decoration: none !important;
+}
 
 
 

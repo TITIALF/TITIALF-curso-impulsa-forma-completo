@@ -238,11 +238,24 @@ li{list-style-position:outside}
     margin-bottom: 15px !important; /* Espacio para separarlo del acordeón */
     padding-left: 5px !important;
 }
-/* FUERZA EL COLOR AZUL Y LA NEGRITA EN ENLACES ACTIVOS DEL MENÚ LATERAL */
+/* FUERZA EL COLOR AZUL EN ENLACES ACTIVOS Y DESACTIVA OTROS ESTILOS DE ENLACE */
+#siteNav li.current-page-parent,
+#siteNav li.active {
+    color: #007691 !important; /* Texto Azul Fuerte en página activa */
+    background-color: transparent !important; /* Evita cualquier fondo no deseado */
+}
+
+/* Fuerza el texto de los enlaces a heredar el color azul */
 #siteNav li.current-page-parent a,
 #siteNav li.active a {
-    color: #007691 !important;
-    font-weight: bold !important;
+    color: #007691 !important; 
+    font-weight: bold !important; /* Fuerza la negrita que desaparecía */
+}
+
+/* Evita que el hover cambie el color del texto activo */
+#siteNav li.current-page-parent a:hover,
+#siteNav li.active a:hover {
+    color: #007691 !important; 
 }
 
 
